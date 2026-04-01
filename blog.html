@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veille Technique Drone & Photogrammétrie 2026 — IARD, Sinistre, Réglementation | SKOPAIR</title>
+  <meta name="description" content="Analyses techniques et réglementaires sur le drone professionnel en inspection et photogrammétrie. Catégorie Ouverte A2, DJI Matrice 4E, WebODM, expertise sinistre IARD — Yvelines et Île-de-France.">
+  <meta name="keywords" content="veille technique drone 2026, photogrammétrie drone Île-de-France, réglementation drone catégorie ouverte A2 BAPD, DJI Matrice 4E inspection, WebODM photogrammétrie professionnelle, drone expertise assurance IARD, blog drone professionnel Yvelines, Metashape RealityCapture comparatif, sinistre toiture drone, constat huissier drone">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://skopair.fr/blog.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+:root {
+  --noir: #0a0a0a;
+  --blanc: #f5f4f0;
+  --or: #c8a96e;
+  --gris: #8a8a8a;
+  --gris-clair: #e8e7e3;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family:'DM Sans',sans-serif; background:var(--blanc); color:var(--noir); font-size:16px; line-height:1.7; }
+h1,h2,h3 { font-family:'Cormorant Garamond',serif; font-weight:400; }
+h1 { font-size:clamp(2rem,5vw,3.2rem); line-height:1.15; letter-spacing:-0.02em; }
+h2 { font-size:clamp(1.5rem,3.5vw,2.2rem); line-height:1.2; }
+h3 { font-size:1.15rem; }
+a { color:var(--or); text-decoration:none; }
+a:hover { text-decoration:underline; }
+
+/* NAV */
+nav { display:flex; justify-content:space-between; align-items:center; padding:1.2rem 5%; border-bottom:1px solid var(--gris-clair); position:sticky; top:0; background:var(--blanc); z-index:100; }
+.nav-logo { font-family:'Cormorant Garamond',serif; font-size:1.4rem; font-weight:600; letter-spacing:0.15em; color:var(--noir); text-decoration:none; }
+.nav-links { display:flex; list-style:none; gap:1.8rem; flex-wrap:wrap; }
+.nav-links a { font-size:0.78rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--gris); text-decoration:none; transition:color .2s; }
+.nav-links a:hover, .nav-links a.active { color:var(--or); }
+
+/* SECTIONS */
+section { padding:5rem 5%; max-width:1100px; margin:0 auto; }
+.dark { background:var(--noir); color:var(--blanc); max-width:100%; padding:4rem 5%; }
+.page-hero { padding:6rem 5% 3rem; max-width:1100px; margin:0 auto; }
+.section-eyebrow { font-size:0.7rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--or); margin-bottom:0.6rem; }
+
+/* CARDS */
+.card-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:2rem; margin-top:2.5rem; }
+.card { border:1px solid var(--gris-clair); padding:2rem; transition:border-color .2s; }
+.card:hover { border-color:var(--or); }
+.card h3 { margin-bottom:0.8rem; }
+.card p { font-size:0.88rem; color:var(--gris); line-height:1.7; }
+
+/* BUTTONS */
+.btn-primary { display:inline-block; padding:0.8rem 2rem; background:var(--or); color:var(--noir); font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; text-decoration:none; transition:background .2s; }
+.btn-primary:hover { background:#b8993e; text-decoration:none; }
+.btn-outline { display:inline-block; padding:0.8rem 2rem; border:1px solid var(--or); color:var(--or); font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; text-decoration:none; transition:all .2s; }
+.btn-outline:hover { background:var(--or); color:var(--noir); text-decoration:none; }
+
+/* BADGE */
+.badge { display:inline-block; padding:0.25rem 0.8rem; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; border:1px solid var(--gris-clair); color:var(--gris); margin:0.2rem; }
+
+/* FOOTER */
+footer { display:flex; flex-direction:column; align-items:center; gap:1.2rem; padding:3rem 5%; border-top:1px solid var(--gris-clair); text-align:center; }
+.footer-logo { font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; letter-spacing:0.15em; }
+footer span:last-child { font-size:0.7rem; color:var(--gris); }
+
+/* ANIM */
+.fade-in { opacity:0; transform:translateY(20px); transition:opacity .6s,transform .6s; }
+.fade-in.visible { opacity:1; transform:translateY(0); }
+
+/* RESPONSIVE */
+@media(max-width:768px) {
+  .nav-links { display:none; }
+  section,.page-hero { padding-left:6%; padding-right:6%; }
+}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">SKOPAIR</a>
+  <ul class="nav-links"><li><a href="index.html">Accueil</a></li><li><a href="expertise.html">Expertise & Assurance</a></li><li><a href="photogrammetrie.html">Photogrammétrie</a></li><li><a href="technologie.html">Technologie</a></li><li><a href="yvelines.html">Yvelines (78)</a></li><li><a href="blog.html" class="active">Veille Technique</a></li>
+    <li><a href="mailto:contact@skopair.fr">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero fade-in">
+  <p class="section-eyebrow">Veille Technique</p>
+  <h1>Analyses techniques<br><em>&amp; r&eacute;glementaires.</em></h1>
+  <p style="color:var(--gris);max-width:560px;font-size:1rem;line-height:1.8;margin-top:1rem;">Notes de veille sur l&rsquo;usage professionnel du drone en inspection et photogramm&eacute;trie. R&eacute;glementation, &eacute;quipement, m&eacute;thodologie, retours terrain.</p>
+</div>
+
+<section class="fade-in">
+  <div class="card-grid">
+    <div class="card">
+      <span class="badge">R&eacute;glementation</span>
+      <h3>Cat&eacute;gorie Ouverte A2 en zone pavillonnaire : ce que l&rsquo;expert d&rsquo;assurance doit savoir</h3>
+      <p>Le cadre Open A2 permet l&rsquo;intervention drone &agrave; proximit&eacute; des personnes avec un drone C2, moyennant le BAPD et une distance de 5m en mode basse vitesse. Pour l&rsquo;expertise sinistre en Yvelines, le d&eacute;collage depuis la propri&eacute;t&eacute; priv&eacute;e avec accord du propri&eacute;taire simplifie les d&eacute;marches.</p>
+      <p style="color:var(--or);font-size:0.8rem;margin-top:1rem;">Article complet en cours de r&eacute;vision technique.</p>
+    </div>
+    <div class="card">
+      <span class="badge">&Eacute;quipement</span>
+      <h3>DJI Matrice 4E : le nouveau standard pour la photogramm&eacute;trie d&rsquo;inspection</h3>
+      <p>Capteur Micro 4/3 20Mp avec obturateur m&eacute;canique, cadence 0,5s, laser m&egrave;tre int&eacute;gr&eacute;, 49 minutes d&rsquo;autonomie. Le M4E remplace le Mavic 3 Enterprise et s&rsquo;impose comme r&eacute;f&eacute;rence pour les missions d&rsquo;inspection technique et de relev&eacute; photogramm&eacute;trique.</p>
+      <p style="color:var(--or);font-size:0.8rem;margin-top:1rem;">Article complet en cours de r&eacute;vision technique.</p>
+    </div>
+    <div class="card">
+      <span class="badge">M&eacute;thode</span>
+      <h3>Protocole d&rsquo;acquisition drone pour expertise sinistre toiture IARD</h3>
+      <p>Plan de vol optimis&eacute; pour la reconstruction 3D d&rsquo;une toiture sinistre&eacute;e : recouvrement 80%, passes nadir + obliques 45&deg;, gestion de la surexposition sur ardoise et zinc. Param&eacute;trage WebODM pour GSD &lt; 1cm.</p>
+      <p style="color:var(--or);font-size:0.8rem;margin-top:1rem;">Article complet en cours de r&eacute;vision technique.</p>
+    </div>
+    <div class="card">
+      <span class="badge">Logiciel</span>
+      <h3>WebODM vs Metashape vs RealityCapture : comparatif pour t&eacute;l&eacute;pilotes ind&eacute;pendants</h3>
+      <p>Analyse co&ucirc;t / performance / compatibilit&eacute; mat&eacute;rielle des trois solutions de photogramm&eacute;trie les plus utilis&eacute;es par les op&eacute;rateurs drone. WebODM (gratuit, local), Metashape (licence perp&eacute;tuelle), RealityCapture (gratuit sous 1M&euro; CA, NVIDIA requis).</p>
+      <p style="color:var(--or);font-size:0.8rem;margin-top:1rem;">Article complet en cours de r&eacute;vision technique.</p>
+    </div>
+    <div class="card">
+      <span class="badge">Terrain</span>
+      <h3>Retour d&rsquo;exp&eacute;rience : premi&egrave;re reconstruction 3D d&rsquo;un pavillon en Yvelines</h3>
+      <p>249 photos, DJI Mini 2, traitement WebODM preset &ldquo;Claude&rdquo; (feature-quality: high, min-num-features: 22000). R&eacute;sultat : orthophoto GSD 0,7cm, nuage dense 9M+ points. Analyse des artefacts et pistes d&rsquo;am&eacute;lioration.</p>
+      <p style="color:var(--or);font-size:0.8rem;margin-top:1rem;">Article complet en cours de r&eacute;vision technique.</p>
+    </div>
+    <div class="card">
+      <span class="badge">March&eacute;</span>
+      <h3>Le drone au service de l&rsquo;expertise assurance IARD : un march&eacute; en &eacute;mergence</h3>
+      <p>Les compagnies d&rsquo;assurance (AXA, Abeille Assurances, Allianz, MAIF, Groupama, Generali) mandatent des experts pour &eacute;valuer les sinistres habitation. Le drone + la photogramm&eacute;trie 3D r&eacute;duisent les d&eacute;lais, objectivent les constats et diminuent les contestations.</p>
+      <p style="color:var(--or);font-size:0.8rem;margin-top:1rem;">Article complet en cours de r&eacute;vision technique.</p>
+    </div>
+  </div>
+</section>
+
+<section class="dark" style="text-align:center;">
+  <p style="color:var(--gris);max-width:500px;margin:0 auto;">Les articles sont en cours de finalisation et seront publi&eacute;s progressivement courant 2026.</p>
+  <a href="mailto:contact@skopair.fr" class="btn-outline" style="margin-top:1.5rem;">Nous contacter</a>
+</section>
+
+<footer>
+  <span class="footer-logo">SKOPAIR</span>
+  <nav style="display:flex;gap:2rem;flex-wrap:wrap;justify-content:center;">
+    <a href="expertise.html" style="color:var(--gris);text-decoration:none;font-size:0.75rem;">Expertise & Assurance</a>
+    <a href="photogrammetrie.html" style="color:var(--gris);text-decoration:none;font-size:0.75rem;">Photogrammétrie</a>
+    <a href="technologie.html" style="color:var(--gris);text-decoration:none;font-size:0.75rem;">Technologie</a>
+    <a href="yvelines.html" style="color:var(--gris);text-decoration:none;font-size:0.75rem;">Yvelines (78)</a>
+    <a href="blog.html" style="color:var(--gris);text-decoration:none;font-size:0.75rem;">Veille Technique</a>
+  </nav>
+  <span>&copy; 2026 SKOPAIR &mdash; contact@skopair.fr</span>
+</footer>
+<script>
+  const obs = new IntersectionObserver(e => e.forEach(el => { if(el.isIntersecting) el.target.classList.add('visible'); }), {threshold:0.1});
+  document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>

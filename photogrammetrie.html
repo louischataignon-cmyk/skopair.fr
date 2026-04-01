@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photogrammétrie 3D par Drone — Orthophoto, Nuage de Points, Modélisation | SKOPAIR Île-de-France</title>
+  <meta name="description" content="SKOPAIR produit des livrables photogrammétriques par drone : orthophoto GSD 0.7cm, nuage de points LAS 9M+, maillage 3D texturé, rapport PDF. Expertise sinistre, géomètre, syndic — Yvelines (78) et Île-de-France.">
+  <meta name="keywords" content="photogrammétrie 3D drone, orthophoto drone assurance, nuage de points LAS drone, modélisation 3D toiture sinistre, drone photogrammétrie Yvelines, relevé aérien géomètre expert, maillage 3D texturé drone, Structure from Motion SfM drone, GSD centimétrique drone inspection, modèle numérique surface MNS drone">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://skopair.fr/photogrammetrie.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+:root {
+  --noir: #0a0a0a;
+  --blanc: #f5f4f0;
+  --or: #c8a96e;
+  --gris: #8a8a8a;
+  --gris-clair: #e8e7e3;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family:'DM Sans',sans-serif; background:var(--blanc); color:var(--noir); font-size:16px; line-height:1.7; }
+h1,h2,h3 { font-family:'Cormorant Garamond',serif; font-weight:400; }
+h1 { font-size:clamp(2rem,5vw,3.2rem); line-height:1.15; letter-spacing:-0.02em; }
+h2 { font-size:clamp(1.5rem,3.5vw,2.2rem); line-height:1.2; }
+h3 { font-size:1.15rem; }
+a { color:var(--or); text-decoration:none; }
+a:hover { text-decoration:underline; }
+
+/* NAV */
+nav { display:flex; justify-content:space-between; align-items:center; padding:1.2rem 5%; border-bottom:1px solid var(--gris-clair); position:sticky; top:0; background:var(--blanc); z-index:100; }
+.nav-logo { font-family:'Cormorant Garamond',serif; font-size:1.4rem; font-weight:600; letter-spacing:0.15em; color:var(--noir); text-decoration:none; }
+.nav-links { display:flex; list-style:none; gap:1.8rem; flex-wrap:wrap; }
+.nav-links a { font-size:0.78rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--gris); text-decoration:none; transition:color .2s; }
+.nav-links a:hover, .nav-links a.active { color:var(--or); }
+
+/* SECTIONS */
+section { padding:5rem 5%; max-width:1100px; margin:0 auto; }
+.dark { background:var(--noir); color:var(--blanc); max-width:100%; padding:4rem 5%; }
+.page-hero { padding:6rem 5% 3rem; max-width:1100px; margin:0 auto; }
+.section-eyebrow { font-size:0.7rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--or); margin-bottom:0.6rem; }
+
+/* CARDS */
+.card-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:2rem; margin-top:2.5rem; }
+.card { border:1px solid var(--gris-clair); padding:2rem; transition:border-color .2s; }
+.card:hover { border-color:var(--or); }
+.card h3 { margin-bottom:0.8rem; }
+.card p { font-size:0.88rem; color:var(--gris); line-height:1.7; }
+
+/* BUTTONS */
+.btn-primary { display:inline-block; padding:0.8rem 2rem; background:var(--or); color:var(--noir); font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; text-decoration:none; transition:background .2s; }
+.btn-primary:hover { background:#b8993e; text-decoration:none; }
+.btn-outline { display:inline-block; padding:0.8rem 2rem; border:1px solid var(--or); color:var(--or); font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; text-decoration:none; transition:all .2s; }
+.btn-outline:hover { background:var(--or); color:var(--noir); text-decoration:none; }
+
+/* BADGE */
+.badge { display:inline-block; padding:0.25rem 0.8rem; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; border:1px solid var(--gris-clair); color:var(--gris); margin:0.2rem; }
+
+/* FOOTER */
+footer { display:flex; flex-direction:column; align-items:center; gap:1.2rem; padding:3rem 5%; border-top:1px solid var(--gris-clair); text-align:center; }
+.footer-logo { font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; letter-spacing:0.15em; }
+footer span:last-child { font-size:0.7rem; color:var(--gris); }
+
+/* ANIM */
+.fade-in { opacity:0; transform:translateY(20px); transition:opacity .6s,transform .6s; }
+.fade-in.visible { opacity:1; transform:translateY(0); }
+
+/* RESPONSIVE */
+@media(max-width:768px) {
+  .nav-links { display:none; }
+  section,.page-hero { padding-left:6%; padding-right:6%; }
+}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">SKOPAIR</a>
+  <ul class="nav-links"><li><a href="index.html">Accueil</a></li><li><a href="expertise.html">Expertise & Assurance</a></li><li><a href="photogrammetrie.html" class="active">Photogrammétrie</a></li><li><a href="technologie.html">Technologie</a></li><li><a href="yvelines.html">Yvelines (78)</a></li><li><a href="blog.html">Veille Technique</a></li>
+    <li><a href="mailto:contact@skopair.fr">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero fade-in">
+  <p class="section-eyebrow">Photogramm&eacute;trie 3D</p>
+  <h1>Mod&eacute;lisation 3D<br><em>par acquisition a&eacute;rienne.</em></h1>
+  <p style="color:var(--gris);max-width:560px;font-size:1rem;line-height:1.8;margin-top:1rem;">SKOPAIR produit des livrables photogramm&eacute;triques de pr&eacute;cision centim&eacute;trique &agrave; partir d&rsquo;acquisitions par drone. Orthophotos, nuages de points, maillages 3D textur&eacute;s &mdash; exploit&eacute;s par les experts d&rsquo;assurance, g&eacute;om&egrave;tres, syndics et bureaux d&rsquo;&eacute;tude.</p>
+</div>
+
+<section class="fade-in">
+  <p class="section-eyebrow">Processus</p>
+  <h2>Du vol au livrable.</h2>
+  <div class="card-grid" style="margin-top:2rem;">
+    <div class="card">
+      <h3>1 &mdash; Acquisition</h3>
+      <p>Vol drone planifi&eacute; avec recouvrement 80%. Prises de vue nadir (verticales) et obliques &agrave; 45&deg; pour une reconstruction compl&egrave;te du b&acirc;timent. R&eacute;solution au sol (GSD) &lt; 1 cm sur toiture standard.</p>
+    </div>
+    <div class="card">
+      <h3>2 &mdash; Reconstruction SfM</h3>
+      <p>Traitement par Structure from Motion (SfM). Alignement des images, g&eacute;n&eacute;ration du nuage de points dense (9M+ points), calcul de l&rsquo;orthomosa&iuml;que g&eacute;or&eacute;f&eacute;renc&eacute;e et du mod&egrave;le num&eacute;rique de surface (MNS).</p>
+    </div>
+    <div class="card">
+      <h3>3 &mdash; Post-traitement &amp; livraison</h3>
+      <p>D&eacute;coupage, mesures, annotations dans QGIS et CloudCompare. G&eacute;n&eacute;ration du rapport PDF brand&eacute; SKOPAIR. Livraison par lien s&eacute;curis&eacute; (WeTransfer Pro, mot de passe).</p>
+    </div>
+  </div>
+</section>
+
+<section class="dark fade-in">
+  <p class="section-eyebrow" style="color:var(--or);">Livrables photogramm&eacute;triques</p>
+  <h2 style="color:var(--blanc);">Quatre formats de sortie.</h2>
+  <div class="card-grid" style="margin-top:2rem;">
+    <div class="card" style="border-color:#333;">
+      <span class="badge" style="border-color:#555;color:var(--or);">GeoTIFF</span>
+      <h3 style="color:var(--blanc);">Orthophotographie</h3>
+      <p style="color:var(--gris);">Image a&eacute;rienne rectifi&eacute;e et g&eacute;or&eacute;f&eacute;renc&eacute;e. GSD 0,7 cm. Mesurable dans QGIS, AutoCAD, ou tout logiciel SIG. Export PNG/JPEG pour usage dans le rapport d&rsquo;expertise assurance.</p>
+    </div>
+    <div class="card" style="border-color:#333;">
+      <span class="badge" style="border-color:#555;color:var(--or);">LAS / LAZ</span>
+      <h3 style="color:var(--blanc);">Nuage de points</h3>
+      <p style="color:var(--gris);">9 millions de points g&eacute;or&eacute;f&eacute;renc&eacute;s. Mesures de distance, surface, volume. Segmentation par zone dans CloudCompare. Format standard compatible avec tous les logiciels m&eacute;tier.</p>
+    </div>
+    <div class="card" style="border-color:#333;">
+      <span class="badge" style="border-color:#555;color:var(--or);">OBJ / GLB</span>
+      <h3 style="color:var(--blanc);">Maillage 3D textur&eacute;</h3>
+      <p style="color:var(--gris);">Mod&egrave;le 3D navigable dans un simple navigateur web. Texture photographique haute r&eacute;solution. Id&eacute;al pour pr&eacute;sentation &agrave; l&rsquo;assur&eacute;, au mandant, ou en r&eacute;union d&rsquo;expertise contradictoire.</p>
+    </div>
+    <div class="card" style="border-color:#333;">
+      <span class="badge" style="border-color:#555;color:var(--or);">MNS / DSM</span>
+      <h3 style="color:var(--blanc);">Mod&egrave;le num&eacute;rique de surface</h3>
+      <p style="color:var(--gris);">Carte altim&eacute;trique colorim&eacute;trique. D&eacute;tection de d&eacute;formations, affaissements de charpente, pentes anormales. Compl&eacute;ment quantitatif au diagnostic visuel de l&rsquo;expert.</p>
+    </div>
+  </div>
+</section>
+
+<section class="fade-in">
+  <p class="section-eyebrow">Applications</p>
+  <h2>Secteurs d&rsquo;intervention.</h2>
+  <div class="card-grid" style="margin-top:2rem;">
+    <div class="card">
+      <h3>Expertise assurance IARD</h3>
+      <p>Sinistres toiture (temp&ecirc;te, gr&ecirc;le, incendie), d&eacute;g&acirc;ts des eaux, pathologies de fa&ccedil;ade. Dossier factuel pour l&rsquo;expert mandant et l&rsquo;assureur.</p>
+    </div>
+    <div class="card">
+      <h3>Constat d&rsquo;huissier a&eacute;rien</h3>
+      <p>Documentation photographique et 3D horodat&eacute;e, g&eacute;or&eacute;f&eacute;renc&eacute;e. Supports exploitables dans le cadre d&rsquo;un constat judiciaire ou d&rsquo;une proc&eacute;dure contradictoire.</p>
+    </div>
+    <div class="card">
+      <h3>Syndics &amp; copropri&eacute;t&eacute;s</h3>
+      <p>Diagnostic visuel des parties communes en hauteur. Pr&eacute;paration des AG avec supports visuels mesurables. &Eacute;tat des lieux de toiture avant ravalement.</p>
+    </div>
+    <div class="card">
+      <h3>G&eacute;om&egrave;tres-experts</h3>
+      <p>Compl&eacute;ment a&eacute;rien au relev&eacute; terrestre. Orthophoto et nuage de points int&eacute;grables au lev&eacute; topographique. Gain de temps sur les parties inaccessibles.</p>
+    </div>
+    <div class="card">
+      <h3>Immobilier &amp; promotion</h3>
+      <p>Relev&eacute;s de toiture et fa&ccedil;ade pour diagnostics avant-vente. Documentation a&eacute;rienne pour agences, notaires et diagnostiqueurs immobiliers.</p>
+    </div>
+    <div class="card">
+      <h3>Collectivit&eacute;s &amp; patrimoine</h3>
+      <p>Inspection des b&acirc;timents communaux, &eacute;coles, gymnases, &eacute;glises. Maintenance pr&eacute;ventive du patrimoine b&acirc;ti public. Suivi pluriannuel par mod&eacute;lisation 3D.</p>
+    </div>
+  </div>
+</section>
+
+<section class="dark" style="text-align:center;">
+  <p class="section-eyebrow" style="color:var(--or);">Un projet de relev&eacute; 3D ?</p>
+  <h2 style="color:var(--blanc);margin-bottom:1.5rem;">Demandez un devis photogramm&eacute;trie.</h2>
+  <a href="mailto:contact@skopair.fr" class="btn-primary">contact@skopair.fr</a>
+</section>
+
+<footer>
+  <span class="footer-logo">SKOPAIR</span>
+  <nav style="display:flex;gap:2rem;flex-wrap:wrap;justify-content:center;">
+    <a href="expertise.html" style="color:var(--gris);text-decoration:none;font-size:0.75rem;">Expertise & Assurance</a>
+    <a href="photogrammetrie.html" style="color:var(--gris);text-decoration:none;font-size:0.75rem;">Photogrammétrie</a>
+    <a href="technologie.html" style="color:var(--gris);text-decoration:none;font-size:0.75rem;">Technologie</a>
+    <a href="yvelines.html" style="color:var(--gris);text-decoration:none;font-size:0.75rem;">Yvelines (78)</a>
+    <a href="blog.html" style="color:var(--gris);text-decoration:none;font-size:0.75rem;">Veille Technique</a>
+  </nav>
+  <span>&copy; 2026 SKOPAIR &mdash; contact@skopair.fr</span>
+</footer>
+<script>
+  const obs = new IntersectionObserver(e => e.forEach(el => { if(el.isIntersecting) el.target.classList.add('visible'); }), {threshold:0.1});
+  document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
