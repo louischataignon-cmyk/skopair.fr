@@ -481,6 +481,7 @@ section.dark .section-eyebrow {
   color: var(--blanc);
   max-width: none;
   margin: 0;
+  padding: 10rem 4rem 5rem;
 }
 
 .badge {
