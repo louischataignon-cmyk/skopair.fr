@@ -5,7 +5,6 @@
   --gris-clair: #e8e7e3;
   --accent: #c8a96e;
   --accent-dark: #9e7e4a;
-  --or: var(--accent);
 }
 
 * {
@@ -292,17 +291,17 @@ section.dark {
   line-height: 1.7;
 }
 
-.dark {
+section.dark {
   background: var(--noir);
   color: var(--blanc);
   padding: 4rem 5%;
 }
 
-.dark h2 {
+section.dark h2 {
   color: var(--blanc);
 }
 
-.dark .section-eyebrow {
+section.dark .section-eyebrow {
   color: var(--accent);
 }
 
