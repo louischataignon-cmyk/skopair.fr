@@ -10,61 +10,7 @@
   <link rel="canonical" href="https://skopair.fr/technologie.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <style>
-    :root { --noir: #0a0a0a; --blanc: #f5f4f0; --gris: #8a8a8a; --gris-clair: #e8e7e3; --accent: #c8a96e; --accent-dark: #9e7e4a; }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { background: var(--blanc); color: var(--noir); font-family: 'DM Sans', sans-serif; font-weight: 300; line-height: 1.7; overflow-x: hidden; }
-    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 3rem; background: rgba(245,244,240,0.97); backdrop-filter: blur(8px); border-bottom: 1px solid var(--gris-clair); }
-    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 500; letter-spacing: 0.2em; color: var(--noir); text-decoration: none; }
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
-    .nav-links a { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gris); text-decoration: none; transition: color 0.3s; }
-    .nav-links a:hover, .nav-links a.active { color: var(--noir); }
-    section { padding: 6rem 4rem; }
-    .section-eyebrow { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
-    h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 4vw, 3.8rem); font-weight: 300; line-height: 1.15; margin-bottom: 2rem; }
-    h1 em { font-style: italic; color: var(--accent); }
-    h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 300; line-height: 1.2; margin-bottom: 1.5rem; }
-    h3 { font-family: 'Cormorant Garamond', serif; font-weight: 400; }
-    .divider { width: 40px; height: 1px; background: var(--accent); margin: 1.5rem 0; }
-    .btn-primary { display: inline-block; padding: 1rem 2.5rem; background: var(--noir); color: var(--blanc); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; transition: background 0.3s; }
-    .btn-primary:hover { background: var(--accent-dark); }
-    .btn-outline { display: inline-block; padding: 1rem 2.5rem; border: 1px solid var(--accent); color: var(--accent); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; transition: all 0.3s; white-space:nowrap; }
-    .btn-outline:hover { background: var(--accent); color: var(--noir); }
-    .page-hero { padding: 10rem 4rem 5rem; background: var(--noir); color: var(--blanc); }
-    .page-hero h1 { color: var(--blanc); }
-    .page-hero .section-eyebrow { color: var(--accent); }
-    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
-    .grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; }
-    .card { background: var(--blanc); padding: 2.5rem; border: 1px solid var(--gris-clair); transition: border-color 0.3s, transform 0.3s; }
-    .card:hover { border-color: var(--accent); transform: translateY(-3px); }
-    .card h3 { font-size: 1.2rem; margin-bottom: 0.8rem; }
-    .card p { font-size: 0.88rem; color: #666; line-height: 1.7; }
-    .dark { background: var(--noir); color: var(--blanc); }
-    .dark h2 { color: var(--blanc); }
-    .dark .section-eyebrow { color: var(--accent); }
-    .beige { background: #f0ede6; }
-    .spec-table { width: 100%; border-collapse: collapse; margin-top: 2rem; font-size: 0.9rem; }
-    .spec-table th { background: var(--noir); color: var(--blanc); padding: 1rem 1.5rem; text-align: left; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 400; }
-    .spec-table td { padding: 0.9rem 1.5rem; border-bottom: 1px solid var(--gris-clair); vertical-align: top; }
-    .spec-table tr:hover td { background: #f8f7f3; }
-    .spec-highlight { color: var(--accent); font-weight: 500; }
-    .drone-card { background: var(--noir); color: var(--blanc); padding: 3rem; border-top: 3px solid var(--accent); }
-    .drone-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 300; color: var(--blanc); margin-bottom: 0.5rem; }
-    .drone-card .tag { font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.5rem; display: block; }
-    footer { background: #050505; color: var(--gris); padding: 2rem 4rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.75rem; letter-spacing: 0.08em; }
-    .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--blanc); letter-spacing: 0.2em; }
-    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.7s ease, transform 0.7s ease; }
-    .fade-in.visible { opacity: 1; transform: translateY(0); }
-    @media (max-width:960px) {
-      nav { padding: 1rem 1.5rem; }
-      .nav-links { display: none; }
-      section { padding: 3.5rem 2rem; }
-      .page-hero { padding: 7rem 2rem 3rem; }
-      .grid-2, .grid-3 { grid-template-columns: 1fr; }
-      footer { flex-direction: column; text-align: center; padding: 2rem; }
-    }
-</style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -81,7 +27,7 @@
   </ul>
 </nav>
 
-<div class="page-hero fade-in">
+<div class="page-hero dark-hero fade-in">
   <p class="section-eyebrow">Vecteurs aériens & équipements</p>
   <h1>Flotte opérationnelle<br><em>Haute précision.</em></h1>
   <p style="color:var(--gris);max-width:560px;font-size:1rem;line-height:1.8;margin-top:1rem;">Les performances des livrables géoréférencés sont directement conditionnées par la qualité du vecteur aérien et de la chaîne capteur. SKOPAIR sélectionne ses équipements selon des critères stricts de précision métrique, de fiabilité opérationnelle et de conformité réglementaire.</p>
