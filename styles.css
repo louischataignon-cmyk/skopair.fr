@@ -477,7 +477,7 @@ section.dark {
   color: inherit;
 }
 
-.page-hero.dark-hero {
+.page-hero.dark {
   background: var(--noir);
   color: var(--blanc);
   max-width: none;
@@ -507,14 +507,14 @@ section.dark {
   color: var(--blanc);
   padding: 1rem 1.5rem;
   text-align: left;
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   font-weight: 400;
 }
 
 .spec-table td {
-  padding: 1rem 1.5rem;
+  padding: 0.9rem 1.5rem;
   border-bottom: 1px solid var(--gris-clair);
   vertical-align: top;
 }
