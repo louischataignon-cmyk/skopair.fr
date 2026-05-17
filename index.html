@@ -34,7 +34,9 @@
     a { color:var(--or); text-decoration:none; }
     a:hover { text-decoration:underline; }
     nav { display:flex; justify-content:space-between; align-items:center; padding:1.2rem 5%; border-bottom:1px solid var(--gris-clair); position:sticky; top:0; background:var(--blanc); z-index:100; }
-    .nav-logo { font-family:'Cormorant Garamond',serif; font-size:1.4rem; font-weight:600; letter-spacing:0.15em; color:var(--noir); text-decoration:none; }
+    .nav-logo { display:flex; align-items:center; gap:0.5rem; text-decoration:none; }
+    .nav-logo img { height:36px; width:auto; }
+    .nav-logo span { font-family:'Cormorant Garamond',serif; font-size:1.4rem; font-weight:600; letter-spacing:0.15em; color:var(--noir); }
     .nav-links { display:flex; list-style:none; gap:1.5rem; flex-wrap:wrap; align-items:center; }
     .nav-links a { font-size:0.75rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--gris); text-decoration:none; transition:color .2s; }
     .nav-links a:hover, .nav-links a.active { color:var(--or); }
@@ -87,7 +89,7 @@
 <body>
 
 <nav>
-  <a href="index.html" class="nav-logo">SKOPAIR</a>
+  <a href="index.html" class="nav-logo"><img src="logo.png" alt="SKOPAIR"><span>SKOPAIR</span></a>
   <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
@@ -103,22 +105,25 @@
 </nav>
 
 <div class="hero fade-in">
-  <p class="section-eyebrow">Drone professionnel &mdash; Yvelines &amp; &Icirc;le-de-France</p>
-  <h1>Acquisition de donn&eacute;es a&eacute;riennes.<br><em>Du clich&eacute; au jumeau num&eacute;rique.</em></h1>
-  <p class="hero-sub">SKOPAIR op&egrave;re des drones certifi&eacute;s pour produire des livrables techniques exploitables : photographies a&eacute;riennes, orthophotographies g&eacute;or&eacute;f&eacute;renc&eacute;es, nuages de points 3D et rapports d'intervention annot&eacute;s. Au service des experts d'assurance IARD, syndics de copropri&eacute;t&eacute; et professionnels du b&acirc;timent.</p>
-  <div style="margin-top:2.5rem;max-width:700px;">
-    <img src="https://images.unsplash.com/photo-1527977966376-1c8408f9f108?w=800&q=80" alt="Drone professionnel en vol pour inspection technique a&eacute;rienne" style="width:100%;height:auto;border:1px solid var(--gris-clair);" loading="lazy">
-  </div>
-
-  <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
-    <a href="contact.html" class="btn-primary">Demander un devis</a>
-    <a href="inspection.html" class="btn-outline">Expertise sinistre</a>
+  <div style="display:flex;align-items:flex-start;gap:3rem;flex-wrap:wrap;">
+    <div style="flex:1;min-width:300px;">
+      <p class="section-eyebrow">Drone &amp; Photogramm&eacute;trie 3D &mdash; Yvelines &amp; &Icirc;le-de-France</p>
+      <h1>Inspection par drone.<br>Mod&eacute;lisation 3D.<br><em>Rapport cl&eacute; en main.</em></h1>
+      <p class="hero-sub">SKOPAIR produit des dossiers techniques via vecteurs a&eacute;riens pour les experts d'assurance IARD, syndics de copropri&eacute;t&eacute;, agents immobiliers et professionnels du b&acirc;timent. Un seul passage drone &mdash; orthophoto, jumeau num&eacute;rique 3D et rapport annot&eacute; livr&eacute;s sous 72h.</p>
+      <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
+        <a href="contact.html" class="btn-primary">Demander un devis</a>
+        <a href="inspection.html" class="btn-outline">Expertise sinistre</a>
+      </div>
+    </div>
+    <div style="flex:0 0 280px;max-width:320px;">
+      <img src="logo.png" alt="SKOPAIR &mdash; Drone &amp; Photogramm&eacute;trie 3D" style="width:100%;height:auto;" loading="lazy">
+    </div>
   </div>
 </div>
 
 <section class="fade-in">
   <p class="section-eyebrow">Nos prestations</p>
-  <h2>Quatre domaines d'intervention.</h2>
+  <h2>Domaines d'intervention.</h2>
   <div class="card-grid">
     <div class="card">
       <span class="card-icon">&#128247;</span>
@@ -183,7 +188,7 @@
       </div>
       <div class="card" style="border-color:#333;background:transparent;">
         <h3 style="color:var(--or);">Proximit&eacute; Yvelines</h3>
-        <p style="color:var(--gris);">Bas&eacute; dans le 78, SKOPAIR intervient en Yvelines et d&eacute;partements limitrophes : Hauts-de-Seine (92), Val-d'Oise (95), Essonne (91), Seine-et-Marne (77) et Paris (75). Intervention sous 24 &agrave; 48h, connaissance du terrain, r&eacute;activit&eacute; garantie.</p>
+        <p style="color:var(--gris);">Bas&eacute; dans le 78, SKOPAIR intervient en Yvelines et d&eacute;partements limitrophes : Hauts-de-Seine (92), Val-d'Oise (95), Essonne (91) et Seine-et-Marne (77). Pour d'autres zones, <a href="contact.html" style="color:var(--or);">nous consulter</a>.</p>
       </div>
     </div>
   </div>
