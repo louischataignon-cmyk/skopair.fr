@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mentions l&eacute;gales — SKOPAIR</title>
+  <meta name="description" content="Mentions légales de SKOPAIR, micro-entreprise de prestations drone et photogrammétrie 3D en Yvelines et Île-de-France.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://skopair.fr/mentions-legales.html">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--noir:#0a0a0a;--blanc:#f5f4f0;--or:#c8a96e;--or-hover:#b8993e;--gris:#8a8a8a;--gris-clair:#e8e7e3}
+    *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',sans-serif;background:var(--blanc);color:var(--noir);font-size:16px;line-height:1.7}
+    h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:400}
+    h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.15;letter-spacing:-0.02em}
+    h2{font-size:clamp(1.3rem,3vw,1.8rem);line-height:1.2;margin-top:2.5rem;margin-bottom:1rem}
+    h3{font-size:1.15rem}
+    a{color:var(--or);text-decoration:none}a:hover{text-decoration:underline}
+    nav{display:flex;justify-content:space-between;align-items:center;padding:1.2rem 5%;border-bottom:1px solid var(--gris-clair);position:sticky;top:0;background:var(--blanc);z-index:100}
+    .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;letter-spacing:.15em;color:var(--noir);text-decoration:none}
+    .nav-links{display:flex;list-style:none;gap:1.5rem;flex-wrap:wrap;align-items:center}
+    .nav-links a{font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;color:var(--gris);text-decoration:none;transition:color .2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--or)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+    .hamburger span{width:22px;height:2px;background:var(--noir);transition:all .3s}
+    .section-eyebrow{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--or);margin-bottom:.6rem}
+    .page-hero{padding:6rem 5% 2rem;max-width:900px;margin:0 auto}
+    .page-hero h1 em{font-style:italic;color:var(--or)}
+    .legal-content{max-width:900px;margin:0 auto;padding:0 5% 5rem;font-size:.92rem;color:var(--noir);line-height:1.8}
+    .legal-content p{margin-bottom:1rem}
+    footer{display:flex;flex-direction:column;align-items:center;gap:1.2rem;padding:3rem 5%;border-top:1px solid var(--gris-clair);text-align:center}
+    .footer-logo{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;letter-spacing:.15em}
+    .footer-nav{display:flex;gap:2rem;flex-wrap:wrap;justify-content:center}
+    .footer-nav a{color:var(--gris);text-decoration:none;font-size:.75rem}.footer-nav a:hover{color:var(--or)}
+    .footer-copy{font-size:.7rem;color:var(--gris)}
+    .footer-legal{font-size:.65rem;color:var(--gris);line-height:1.6}
+    .fade-in{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}
+    .fade-in.visible{opacity:1;transform:translateY(0)}
+    @media(max-width:768px){
+      .hamburger{display:flex}
+      .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--blanc);padding:1.5rem 5%;border-bottom:1px solid var(--gris-clair);gap:1rem}
+      .nav-links.open{display:flex}
+      .page-hero,.legal-content{padding-left:6%;padding-right:6%}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">SKOPAIR</a>
+  <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="prisedevue.html">Prise de vue</a></li>
+    <li><a href="inspection.html">Inspection</a></li>
+    <li><a href="photogrammetrie.html">Photogramm&eacute;trie 3D</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero fade-in">
+  <p class="section-eyebrow">Informations l&eacute;gales</p>
+  <h1>Mentions l&eacute;gales.</h1>
+</div>
+
+<div class="legal-content fade-in">
+
+  <h2>&Eacute;diteur du site</h2>
+  <p>
+    SKOPAIR<br>
+    Micro-entreprise (entrepreneur individuel)<br>
+    SIRET&nbsp;: 107&nbsp;590&nbsp;598&nbsp;00015<br>
+    Code APE&nbsp;: 74.20Z &mdash; Activit&eacute;s photographiques<br>
+    T&eacute;l&eacute;phone&nbsp;: 07&nbsp;43&nbsp;78&nbsp;58&nbsp;81<br>
+    Email&nbsp;: <a href="mailto:contact@skopair.fr">contact@skopair.fr</a><br>
+    Site&nbsp;: <a href="https://skopair.fr">https://skopair.fr</a>
+  </p>
+  <p>TVA non applicable, article 293&nbsp;B du Code g&eacute;n&eacute;ral des imp&ocirc;ts.</p>
+
+  <h2>Activit&eacute; de t&eacute;l&eacute;pilotage de drone</h2>
+  <p>
+    Exploitant UAS enregistr&eacute; aupr&egrave;s de la DGAC.<br>
+    T&eacute;l&eacute;pilote certifi&eacute; DGAC &mdash; Brevet d'aptitude de pilote &agrave; distance (BAPD), cat&eacute;gorie ouverte A1/A2/A3.<br>
+    Assurance responsabilit&eacute; civile professionnelle drone en cours de validit&eacute;.
+  </p>
+
+  <h2>H&eacute;bergement</h2>
+  <p>
+    GitHub Pages &mdash; GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, &Eacute;tats-Unis.<br>
+    <a href="https://github.com" target="_blank" rel="noopener">https://github.com</a>
+  </p>
+
+  <h2>Directeur de la publication</h2>
+  <p>Le repr&eacute;sentant l&eacute;gal de SKOPAIR.</p>
+
+  <h2>Propri&eacute;t&eacute; intellectuelle</h2>
+  <p>
+    L'ensemble du contenu de ce site (textes, photographies, mod&egrave;les 3D, orthophotos, logo, charte graphique) est la propri&eacute;t&eacute; exclusive de SKOPAIR, sauf mention contraire. Toute reproduction, m&ecirc;me partielle, est interdite sans autorisation &eacute;crite pr&eacute;alable.
+  </p>
+
+  <h2>Donn&eacute;es personnelles</h2>
+  <p>
+    Ce site ne collecte aucune donn&eacute;e personnelle de mani&egrave;re automatique. Les &eacute;changes par email ou t&eacute;l&eacute;phone sont trait&eacute;s dans le strict cadre de la relation commerciale, conform&eacute;ment au RGPD.
+  </p>
+  <p>
+    Droit d'acc&egrave;s, de rectification et de suppression&nbsp;: <a href="mailto:contact@skopair.fr">contact@skopair.fr</a>.
+  </p>
+
+  <h2>Limitation de responsabilit&eacute;</h2>
+  <p>
+    SKOPAIR fournit des livrables techniques (orthophotos, nuages de points, mod&egrave;les 3D, rapports annot&eacute;s) &agrave; titre documentaire. Ces livrables ne constituent en aucun cas un diagnostic, une expertise ou une qualification de sinistre, lesquels rel&egrave;vent exclusivement de la comp&eacute;tence de l'expert mandant.
+  </p>
+
+</div>
+
+<footer>
+  <span class="footer-logo">SKOPAIR</span>
+  <nav class="footer-nav">
+    <a href="prisedevue.html">Prise de vue</a>
+    <a href="inspection.html">Inspection</a>
+    <a href="photogrammetrie.html">Photogramm&eacute;trie 3D</a>
+    <a href="faq.html">FAQ</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="mentions-legales.html">Mentions l&eacute;gales</a>
+  </nav>
+  <span class="footer-copy">&copy; 2026 SKOPAIR &mdash; contact@skopair.fr &mdash; 07&nbsp;43&nbsp;78&nbsp;58&nbsp;81 &mdash; Yvelines (78), &Icirc;le-de-France</span>
+  <span class="footer-legal">SIRET 107&nbsp;590&nbsp;598&nbsp;00015 &mdash; Exploitant UAS enregistr&eacute; DGAC &mdash; T&eacute;l&eacute;pilote certifi&eacute; DGAC &mdash; TVA non applicable, art.&nbsp;293&nbsp;B du CGI</span>
+</footer>
+
+<script>
+  const obs=new IntersectionObserver(e=>e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('visible')}),{threshold:.1});
+  document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
