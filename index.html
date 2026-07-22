@@ -16,191 +16,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --noir: #0a0a0a;
-      --blanc: #f5f4f0;
-      --or: #c8a96e;
-      --or-hover: #b8993e;
-      --gris: #8a8a8a;
-      --gris-clair: #e8e7e3;
-    }
-    * { margin:0; padding:0; box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body { font-family:'DM Sans',sans-serif; background:var(--blanc); color:var(--noir); font-size:16px; line-height:1.7; }
-    h1,h2,h3 { font-family:'Cormorant Garamond',serif; font-weight:400; }
-    h1 { font-size:clamp(2rem,5vw,3.2rem); line-height:1.15; letter-spacing:-0.02em; }
-    h2 { font-size:clamp(1.5rem,3.5vw,2.2rem); line-height:1.2; }
-    h3 { font-size:1.15rem; }
-    a { color:var(--or); text-decoration:none; }
-    a:hover { text-decoration:underline; }
-    nav { display:flex; justify-content:space-between; align-items:center; padding:1.2rem 5%; border-bottom:1px solid var(--gris-clair); position:sticky; top:0; background:var(--blanc); z-index:100; }
-    .nav-logo { display:flex; align-items:center; gap:0.5rem; text-decoration:none; }
-    .nav-logo img { height:36px; width:auto; }
-    .nav-logo span { font-family:'Cormorant Garamond',serif; font-size:1.4rem; font-weight:600; letter-spacing:0.15em; color:var(--noir); }
-    .nav-links { display:flex; list-style:none; gap:1.5rem; flex-wrap:wrap; align-items:center; }
-    .nav-links a { font-size:0.75rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--gris); text-decoration:none; transition:color .2s; }
-    .nav-links a:hover, .nav-links a.active { color:var(--or); }
-    .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none; padding:4px; }
-    .hamburger span { width:22px; height:2px; background:var(--noir); transition:all .3s; }
-    section { padding:5rem 5%; max-width:1100px; margin:0 auto; }
-    .dark { background:var(--noir); color:var(--blanc); max-width:100%; padding:4rem 5%; }
-    .dark-inner { max-width:1100px; margin:0 auto; }
-    .section-eyebrow { font-size:0.7rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--or); margin-bottom:0.6rem; }
-    .hero { padding:6rem 5% 4rem; max-width:1100px; margin:0 auto; }
-    .hero h1 em { font-style:italic; color:var(--or); }
-    .hero-sub { color:var(--gris); max-width:560px; font-size:1rem; line-height:1.8; margin-top:1.2rem; }
-    .hero-badges { display:flex; gap:0.8rem; flex-wrap:wrap; margin-top:2rem; }
-    .hero-badge { display:inline-flex; align-items:center; gap:0.4rem; padding:0.4rem 1rem; font-size:0.72rem; letter-spacing:0.06em; text-transform:uppercase; border:1px solid var(--gris-clair); color:var(--gris); }
-    .hero-badge strong { color:var(--or); font-weight:500; }
-    .card-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:2rem; margin-top:2.5rem; }
-    .card { border:1px solid var(--gris-clair); padding:2rem; transition:border-color .3s, transform .2s; }
-    .card:hover { border-color:var(--or); transform:translateY(-2px); }
-    .card-icon { font-size:1.6rem; margin-bottom:1rem; display:block; }
-    .card h3 { margin-bottom:0.8rem; }
-    .card p { font-size:0.88rem; color:var(--gris); line-height:1.7; }
-    .card-link { display:inline-block; margin-top:1.2rem; font-size:0.75rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--or); text-decoration:none; }
-    .card-link:hover { color:var(--or-hover); }
-    .card-link::after { content:" \2192"; }
-    .btn-primary { display:inline-block; padding:0.8rem 2rem; background:var(--or); color:var(--noir); font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; text-decoration:none; transition:background .2s; }
-    .btn-primary:hover { background:var(--or-hover); text-decoration:none; }
-    .btn-outline { display:inline-block; padding:0.8rem 2rem; border:1px solid var(--or); color:var(--or); font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; text-decoration:none; transition:all .2s; }
-    .btn-outline:hover { background:var(--or); color:var(--noir); text-decoration:none; }
-    .stats { display:flex; gap:3rem; flex-wrap:wrap; margin-top:3rem; padding-top:2rem; border-top:1px solid var(--gris-clair); }
-    .stat-number { font-family:'Cormorant Garamond',serif; font-size:2.2rem; font-weight:300; color:var(--or); line-height:1; }
-    .stat-label { font-size:0.72rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--gris); margin-top:0.3rem; }
-    footer { display:flex; flex-direction:column; align-items:center; gap:1.2rem; padding:3rem 5%; border-top:1px solid var(--gris-clair); text-align:center; }
-    .footer-logo { font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; letter-spacing:0.15em; }
-    .footer-nav { display:flex; gap:2rem; flex-wrap:wrap; justify-content:center; }
-    .footer-nav a { color:var(--gris); text-decoration:none; font-size:0.75rem; }
-    .footer-nav a:hover { color:var(--or); }
-    .footer-copy { font-size:0.7rem; color:var(--gris); }
-    .fade-in { opacity:0; transform:translateY(20px); transition:opacity .6s,transform .6s; }
-    .fade-in.visible { opacity:1; transform:translateY(0); }
-    @media(max-width:768px) {
-      .hamburger { display:flex; }
-      .nav-links { display:none; position:absolute; top:100%; left:0; right:0; flex-direction:column; background:var(--blanc); padding:1.5rem 5%; border-bottom:1px solid var(--gris-clair); gap:1rem; }
-      .nav-links.open { display:flex; }
-      section,.hero { padding-left:6%; padding-right:6%; }
-      .stats { gap:2rem; }
-      .card-grid { grid-template-columns:1fr; }
-    }
+    :root{--noir:#0a0a0a;--blanc:#f5f4f0;--or:#c8a96e;--or-hover:#b8993e;--gris:#8a8a8a;--gris-clair:#e8e7e3}*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'DM Sans',sans-serif;background:var(--blanc);color:var(--noir);font-size:16px;line-height:1.7}h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:400}h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.15;letter-spacing:-0.02em}h2{font-size:clamp(1.5rem,3.5vw,2.2rem);line-height:1.2}h3{font-size:1.15rem}a{color:var(--or);text-decoration:none}a:hover{text-decoration:underline}nav{display:flex;justify-content:space-between;align-items:center;padding:1.2rem 5%;border-bottom:1px solid var(--gris-clair);position:sticky;top:0;background:var(--blanc);z-index:100}.nav-logo{display:flex;align-items:center;gap:0.5rem;text-decoration:none}.nav-logo img{height:36px;width:auto}.nav-logo span{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;letter-spacing:0.15em;color:var(--noir)}.nav-links{display:flex;list-style:none;gap:1.5rem;flex-wrap:wrap;align-items:center}.nav-links a{font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--gris);text-decoration:none;transition:color .2s}.nav-links a:hover,.nav-links a.active{color:var(--or)}.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}.hamburger span{width:22px;height:2px;background:var(--noir);transition:all .3s}section{padding:5rem 5%;max-width:1100px;margin:0 auto}.dark{background:var(--noir);color:var(--blanc);max-width:100%;padding:4rem 5%}.dark-inner{max-width:1100px;margin:0 auto}.section-eyebrow{font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--or);margin-bottom:0.6rem}.hero{padding:6rem 5% 4rem;max-width:1100px;margin:0 auto}.hero h1 em{font-style:italic;color:var(--or)}.hero-sub{color:var(--gris);max-width:560px;font-size:1rem;line-height:1.8;margin-top:1.2rem}.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2rem;margin-top:2.5rem}.card{border:1px solid var(--gris-clair);padding:2rem;transition:border-color .3s, transform .2s}.card:hover{border-color:var(--or);transform:translateY(-2px)}.card-icon{font-size:1.6rem;margin-bottom:1rem;display:block}.card h3{margin-bottom:0.8rem}.card p{font-size:0.88rem;color:var(--gris);line-height:1.7}.card-link{display:inline-block;margin-top:1.2rem;font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--or);text-decoration:none}.card-link:hover{color:var(--or-hover)}.card-link::after{content:" \2192"}.btn-primary{display:inline-block;padding:0.8rem 2rem;background:var(--or);color:var(--noir);font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;transition:background .2s}.btn-primary:hover{background:var(--or-hover);text-decoration:none}.btn-outline{display:inline-block;padding:0.8rem 2rem;border:1px solid var(--or);color:var(--or);font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;transition:all .2s}.btn-outline:hover{background:var(--or);color:var(--noir);text-decoration:none}.stats{display:flex;gap:3rem;flex-wrap:wrap;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--gris-clair)}.stat-number{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;color:var(--or);line-height:1}.stat-label{font-size:0.72rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--gris);margin-top:0.3rem}footer{display:flex;flex-direction:column;align-items:center;gap:1.2rem;padding:3rem 5%;border-top:1px solid var(--gris-clair);text-align:center}.footer-logo{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;letter-spacing:0.15em}.footer-nav{display:flex;gap:2rem;flex-wrap:wrap;justify-content:center}.footer-nav a{color:var(--gris);text-decoration:none;font-size:0.75rem}.footer-nav a:hover{color:var(--or)}.footer-copy{font-size:0.7rem;color:var(--gris)}.fade-in{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}.fade-in.visible{opacity:1;transform:translateY(0)}@media(max-width:768px){.hamburger{display:flex}.nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--blanc);padding:1.5rem 5%;border-bottom:1px solid var(--gris-clair);gap:1rem}.nav-links.open{display:flex}section,.hero{padding-left:6%;padding-right:6%}.stats{gap:2rem}.card-grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
-
-<nav>
-  <a href="index.html" class="nav-logo"><img src="logo.png" alt="SKOPAIR"><span>SKOPAIR</span></a>
-  <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
-  <ul class="nav-links">
-    <li><a href="index.html" class="active">Accueil</a></li>
-    <li><a href="prisedevue.html">Prise de vue</a></li>
-    <li><a href="inspection.html">Inspection</a></li>
-    <li><a href="photogrammetrie.html">Photogramm&eacute;trie 3D</a></li>
-    <li><a href="faq.html">FAQ</a></li>
-    <li><a href="blog.html">Blog</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-
-<div class="hero fade-in">
-  <div style="display:flex;align-items:flex-start;gap:3rem;flex-wrap:wrap;">
-    <div style="flex:1;min-width:300px;">
-      <p class="section-eyebrow">Drone &amp; Photogramm&eacute;trie 3D &mdash; Yvelines &amp; &Icirc;le-de-France</p>
-      <h1>Inspection par drone.<br>Mod&eacute;lisation 3D.<br><em>Rapport cl&eacute; en main.</em></h1>
-      <p class="hero-sub">SKOPAIR produit des dossiers techniques via vecteurs a&eacute;riens pour les experts d'assurance IARD, syndics de copropri&eacute;t&eacute;, agents immobiliers et professionnels du b&acirc;timent. Un seul passage drone &mdash; orthophoto, jumeau num&eacute;rique 3D et rapport annot&eacute; livr&eacute;s sous 72h.</p>
-      <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
-        <a href="contact.html" class="btn-primary">Demander un devis</a>
-        <a href="inspection.html" class="btn-outline">Expertise sinistre</a>
-      </div>
-    </div>
-    <div style="flex:0 0 280px;max-width:320px;">
-      <img src="logo.png" alt="SKOPAIR &mdash; Drone &amp; Photogramm&eacute;trie 3D" style="width:100%;height:auto;" loading="lazy">
-    </div>
-  </div>
-</div>
-
-<section class="fade-in">
-  <p class="section-eyebrow">Nos prestations</p>
-  <h2>Domaines d'intervention.</h2>
-  <div class="card-grid">
-    <div class="card">
-      <span class="card-icon">&#128247;</span>
-      <h3>Prise de vue a&eacute;rienne</h3>
-      <p>Photographie et vid&eacute;o par drone pour l'immobilier, les collectivit&eacute;s, les &eacute;v&eacute;nements et les particuliers. Clich&eacute;s HD, plans larges, vid&eacute;os 4K.</p>
-      <a href="prisedevue.html" class="card-link">En savoir plus</a>
-    </div>
-    <div class="card">
-      <span class="card-icon">&#128269;</span>
-      <h3>Inspection technique</h3>
-      <p>Inspection de toiture, fa&ccedil;ade et ouvrage pour les experts d'assurance IARD, les syndics et les professionnels du b&acirc;timent. Rapport PDF annot&eacute;, livr&eacute; sous 48 &agrave; 72h.</p>
-      <a href="inspection.html" class="card-link">Expertise sinistre</a>
-    </div>
-    <div class="card">
-      <span class="card-icon">&#129707;</span>
-      <h3>Photogramm&eacute;trie 3D</h3>
-      <p>Mod&eacute;lisation 3D haute r&eacute;solution par photogramm&eacute;trie. Orthophoto, nuage de points LAS, maillage textur&eacute;, jumeau num&eacute;rique navigable en ligne.</p>
-      <a href="photogrammetrie.html" class="card-link">Jumeau num&eacute;rique</a>
-    </div>
-    <div class="card">
-      <span class="card-icon">&#128202;</span>
-      <h3>Livrables sur mesure</h3>
-      <p>Chaque mission produit des livrables adapt&eacute;s &agrave; votre m&eacute;tier : orthophoto GeoTIFF, nuage de points LAS/LAZ, rapport PDF annot&eacute;, mod&egrave;le 3D navigable en ligne (GLB). Formats compl&eacute;mentaires sur demande.</p>
-      <a href="faq.html" class="card-link">Questions fr&eacute;quentes</a>
-    </div>
-  </div>
-</section>
-
-<section class="fade-in">
-  <div class="stats">
-    <div class="stat">
-      <div class="stat-number">HD</div>
-      <div class="stat-label">R&eacute;solution haute d&eacute;finition</div>
-    </div>
-    <div class="stat">
-      <div class="stat-number">3D</div>
-      <div class="stat-label">Mod&eacute;lisation haute pr&eacute;cision</div>
-    </div>
-    <div class="stat">
-      <div class="stat-number">48-72h</div>
-      <div class="stat-label">D&eacute;lai de livraison</div>
-    </div>
-    <div class="stat">
-      <div class="stat-number">78+</div>
-      <div class="stat-label">Yvelines &amp; &Icirc;le-de-France</div>
-    </div>
-  </div>
-</section>
-
-<div class="dark">
-  <div class="dark-inner fade-in">
-    <p class="section-eyebrow" style="color:var(--or);">Pourquoi SKOPAIR</p>
-    <h2 style="color:var(--blanc);">Ce qui nous distingue.</h2>
-    <div class="card-grid" style="margin-top:2rem;">
-      <div class="card" style="border-color:#333;background:transparent;">
-        <h3 style="color:var(--or);">Sp&eacute;cialisation assurance</h3>
-        <p style="color:var(--gris);">Nos livrables sont con&ccedil;us pour les experts d'assurance IARD. Cadre factuel strict : SKOPAIR documente et mesure, la qualification du sinistre rel&egrave;ve exclusivement de l'expert mandant.</p>
-      </div>
-      <div class="card" style="border-color:#333;background:transparent;">
-        <h3 style="color:var(--or);">Jumeau num&eacute;rique</h3>
-        <p style="color:var(--gris);">Au-del&agrave; de la photo a&eacute;rienne : un mod&egrave;le 3D navigable dans lequel l'expert inspecte le b&acirc;timent depuis son bureau. Mesures int&eacute;gr&eacute;es, texture photographique, partage par lien.</p>
-      </div>
-      <div class="card" style="border-color:#333;background:transparent;">
-        <h3 style="color:var(--or);">Proximit&eacute; Yvelines</h3>
-        <p style="color:var(--gris);">Bas&eacute; dans le 78, SKOPAIR intervient en Yvelines et d&eacute;partements limitrophes : Hauts-de-Seine (92), Val-d'Oise (95), Essonne (91) et Seine-et-Marne (77). Pour d'autres zones, <a href="contact.html" style="color:var(--or);">nous consulter</a>.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<section class="fade-in" style="text-align:center;">
-  <p class="section-eyebrow">Expert d'assurance, syndic, professionnel du b&acirc;timent ?</p>
-  <h2 style="margin-bottom:1.5rem;">Contactez SKOPAIR.</h2>
-  <p style="color:var(--gris);max-width:480px;margin:0 auto 2rem;">Devis gratuit sous 48h. Intervention en Yvelines et &Icirc;le-de-France.</p>
-  <a href="contact.html" class="btn-primary">contact@skopair.fr</a>
-</section>
-
+<nav><a href="index.html" class="nav-logo"><img src="logo.png" alt="SKOPAIR"><span>SKOPAIR</span></a><button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button><ul class="nav-links"><li><a href="index.html" class="active">Accueil</a></li><li><a href="prisedevue.html">Prise de vue</a></li><li><a href="inspection.html">Inspection</a></li><li><a href="photogrammetrie.html">Photogramm&eacute;trie 3D</a></li><li><a href="faq.html">FAQ</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+<div class="hero fade-in"><div style="display:flex;align-items:flex-start;gap:3rem;flex-wrap:wrap;"><div style="flex:1;min-width:300px;"><p class="section-eyebrow">Drone &amp; Photogramm&eacute;trie 3D &mdash; Yvelines &amp; &Icirc;le-de-France</p><h1>Inspection par drone.<br>Mod&eacute;lisation 3D.<br><em>Rapport cl&eacute; en main.</em></h1><p class="hero-sub">SKOPAIR produit des dossiers techniques via vecteurs a&eacute;riens pour les experts d'assurance IARD, syndics de copropri&eacute;t&eacute;, agents immobiliers et professionnels du b&acirc;timent. Un seul passage drone &mdash; orthophoto, jumeau num&eacute;rique 3D et rapport annot&eacute; livr&eacute;s sous 72h.</p><div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;"><a href="contact.html" class="btn-primary">Demander un devis</a><a href="inspection.html" class="btn-outline">Expertise sinistre</a></div></div><div style="flex:0 0 280px;max-width:320px;"><img src="logo.png" alt="SKOPAIR &mdash; Drone &amp; Photogramm&eacute;trie 3D" style="width:100%;height:auto;" loading="lazy"></div></div></div>
+<section class="fade-in"><p class="section-eyebrow">Nos prestations</p><h2>Domaines d'intervention.</h2><div class="card-grid"><div class="card"><span class="card-icon">&#128247;</span><h3>Prise de vue a&eacute;rienne</h3><p>Photographie et vid&eacute;o par drone pour l'immobilier, les collectivit&eacute;s, les &eacute;v&eacute;nements et les particuliers. Clich&eacute;s HD, plans larges, vid&eacute;os 4K.</p><a href="prisedevue.html" class="card-link">En savoir plus</a></div><div class="card"><span class="card-icon">&#128269;</span><h3>Inspection technique</h3><p>Inspection de toiture, fa&ccedil;ade et ouvrage pour les experts d'assurance IARD, les syndics et les professionnels du b&acirc;timent. Rapport PDF annot&eacute;, livr&eacute; sous 48 &agrave; 72h.</p><a href="inspection.html" class="card-link">Expertise sinistre</a></div><div class="card"><span class="card-icon">&#129707;</span><h3>Photogramm&eacute;trie 3D</h3><p>Mod&eacute;lisation 3D haute r&eacute;solution par photogramm&eacute;trie. Orthophoto, nuage de points LAS, maillage textur&eacute;, jumeau num&eacute;rique navigable en ligne.</p><a href="photogrammetrie.html" class="card-link">Jumeau num&eacute;rique</a></div><div class="card"><span class="card-icon">&#128202;</span><h3>Livrables sur mesure</h3><p>Chaque mission produit des livrables adapt&eacute;s &agrave; votre m&eacute;tier : orthophoto GeoTIFF, nuage de points LAS/LAZ, rapport PDF annot&eacute;, mod&egrave;le 3D navigable en ligne (GLB). Formats compl&eacute;mentaires sur demande.</p><a href="faq.html" class="card-link">Questions fr&eacute;quentes</a></div></div></section>
+<section class="fade-in"><div class="stats"><div class="stat"><div class="stat-number">HD</div><div class="stat-label">R&eacute;solution haute d&eacute;finition</div></div><div class="stat"><div class="stat-number">3D</div><div class="stat-label">Mod&eacute;lisation haute pr&eacute;cision</div></div><div class="stat"><div class="stat-number">48-72h</div><div class="stat-label">D&eacute;lai de livraison</div></div><div class="stat"><div class="stat-number">78+</div><div class="stat-label">Yvelines &amp; &Icirc;le-de-France</div></div></div></section>
+<div class="dark"><div class="dark-inner fade-in"><p class="section-eyebrow" style="color:var(--or);">Pourquoi SKOPAIR</p><h2 style="color:var(--blanc);">Ce qui nous distingue.</h2><div class="card-grid" style="margin-top:2rem;"><div class="card" style="border-color:#333;background:transparent;"><h3 style="color:var(--or);">Sp&eacute;cialisation assurance</h3><p style="color:var(--gris);">Nos livrables sont con&ccedil;us pour les experts d'assurance IARD. Cadre factuel strict : SKOPAIR documente et mesure, la qualification du sinistre rel&egrave;ve exclusivement de l'expert mandant.</p></div><div class="card" style="border-color:#333;background:transparent;"><h3 style="color:var(--or);">Jumeau num&eacute;rique</h3><p style="color:var(--gris);">Au-del&agrave; de la photo a&eacute;rienne : un mod&egrave;le 3D navigable dans lequel l'expert inspecte le b&acirc;timent depuis son bureau. Mesures int&eacute;gr&eacute;es, texture photographique, partage par lien.</p></div><div class="card" style="border-color:#333;background:transparent;"><h3 style="color:var(--or);">Proximit&eacute; Yvelines</h3><p style="color:var(--gris);">Bas&eacute; dans le 78, SKOPAIR intervient en Yvelines et d&eacute;partements limitrophes : Hauts-de-Seine (92), Val-d'Oise (95), Essonne (91) et Seine-et-Marne (77). Pour d'autres zones, <a href="contact.html" style="color:var(--or);">nous consulter</a>.</p></div></div></div></div>
+<section class="fade-in" style="text-align:center;"><p class="section-eyebrow">Expert d'assurance, syndic, professionnel du b&acirc;timent ?</p><h2 style="margin-bottom:1.5rem;">Contactez SKOPAIR.</h2><p style="color:var(--gris);max-width:480px;margin:0 auto 2rem;">Devis gratuit sous 48h. Intervention en Yvelines et &Icirc;le-de-France.</p><a href="contact.html" class="btn-primary">contact@skopair.fr</a></section>
 <footer>
   <span class="footer-logo">SKOPAIR</span>
   <nav class="footer-nav">
@@ -210,13 +35,11 @@
     <a href="faq.html">FAQ</a>
     <a href="blog.html">Blog</a>
     <a href="contact.html">Contact</a>
+    <a href="mentions-legales.html">Mentions l&eacute;gales</a>
   </nav>
-  <span class="footer-copy">&copy; 2026 SKOPAIR &mdash; contact@skopair.fr &mdash; Yvelines (78), &Icirc;le-de-France</span>
+  <span class="footer-copy">&copy; 2026 SKOPAIR &mdash; contact@skopair.fr &mdash; 07&nbsp;43&nbsp;78&nbsp;58&nbsp;81 &mdash; Yvelines (78), &Icirc;le-de-France</span>
+  <span class="footer-legal">SIRET 107&nbsp;590&nbsp;598&nbsp;00015 &mdash; Exploitant UAS enregistr&eacute; DGAC &mdash; T&eacute;l&eacute;pilote certifi&eacute; DGAC &mdash; TVA non applicable, art.&nbsp;293&nbsp;B du CGI</span>
 </footer>
-
-<script>
-  const obs = new IntersectionObserver(e => e.forEach(el => { if(el.isIntersecting) el.target.classList.add('visible'); }),{threshold:0.1});
-  document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
-</script>
+<script>const obs=new IntersectionObserver(e=>e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('visible')}),{threshold:0.1});document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));</script>
 </body>
 </html>
