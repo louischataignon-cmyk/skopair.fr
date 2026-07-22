@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog — Actualités Drone, Photogrammétrie & Inspection 2026 | SKOPAIR</title>
   <meta name="description" content="Actualités et analyses sur le drone professionnel : inspection, photogrammétrie 3D, réglementation, nouveaux équipements. DJI Mini 5 Pro, catégorie ouverte A2, Gaussian Splatting — SKOPAIR Yvelines.">
-  <meta name="keywords" content="blog drone professionnel 2026, DJI Mini 5 Pro test, drone inspection toiture actualité, photogrammétrie 3D drone, Gaussian Splatting bâtiment, réglementation drone catégorie ouverte A2, drone expert assurance IARD, WebODM RealityCapture comparatif, drone Yvelines Île-de-France, inspection sinistre drone">
+  <meta name="keywords" content="blog drone professionnel 2026, DJI Mini 5 Pro test, drone inspection toiture actualité, photogrammétrie 3D drone, réglementation drone catégorie ouverte A2, drone expert assurance IARD, drone Yvelines Île-de-France, inspection sinistre drone">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://skopair.fr/blog.html">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -20,45 +20,54 @@
     h2{font-size:clamp(1.5rem,3.5vw,2.2rem);line-height:1.2}h3{font-size:1.15rem}
     a{color:var(--or);text-decoration:none}a:hover{text-decoration:underline}
     nav{display:flex;justify-content:space-between;align-items:center;padding:1.2rem 5%;border-bottom:1px solid var(--gris-clair);position:sticky;top:0;background:var(--blanc);z-index:100}
-    .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;letter-spacing:.15em;color:var(--noir);text-decoration:none}
+    .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;letter-spacing:.15em;color:var(--noir);text-decoration:none;display:flex;align-items:center;gap:.5rem}
+    .nav-logo img{height:36px;width:auto}
     .nav-links{display:flex;list-style:none;gap:1.5rem;flex-wrap:wrap;align-items:center}
     .nav-links a{font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;color:var(--gris);text-decoration:none;transition:color .2s}
     .nav-links a:hover,.nav-links a.active{color:var(--or)}
     .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
     .hamburger span{width:22px;height:2px;background:var(--noir);transition:all .3s}
     .section-eyebrow{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--or);margin-bottom:.6rem}
-    .page-hero{padding:6rem 5% 3rem;max-width:1100px;margin:0 auto}
+    .page-hero{padding:6rem 5% 3rem;max-width:100%;background:var(--noir)}
+    .page-hero-inner{max-width:1100px;margin:0 auto}
+    .page-hero h1{color:var(--blanc)}
     .page-hero h1 em{font-style:italic;color:var(--or)}
-    .badge{display:inline-block;padding:.25rem .8rem;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--gris-clair);color:var(--gris);margin:0 .3rem .3rem 0}
-    .blog-grid{max-width:1100px;margin:0 auto;padding:0 5% 4rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem}
-    .blog-card{border:1px solid var(--gris-clair);padding:2rem;transition:border-color .3s,transform .2s}
-    .blog-card:hover{border-color:var(--or);transform:translateY(-2px)}
-    .blog-card h3{margin:.8rem 0 .6rem;font-size:1.1rem}
-    .blog-card p{font-size:.85rem;color:var(--gris);line-height:1.7}
-    .blog-date{font-size:.72rem;color:var(--or);letter-spacing:.06em}
-    .blog-status{display:inline-block;margin-top:1rem;font-size:.72rem;color:var(--or);letter-spacing:.04em;font-style:italic}
-    .btn-outline{display:inline-block;padding:.8rem 2rem;border:1px solid var(--or);color:var(--or);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:all .2s}
-    .btn-outline:hover{background:var(--or);color:var(--noir);text-decoration:none}
+    .page-hero p{color:var(--gris)}
+    .article{max-width:800px;margin:0 auto;padding:2rem 5% 4rem}
+    .article h2{margin:2.5rem 0 1rem;font-size:1.5rem}
+    .article h3{margin:1.8rem 0 .8rem;font-size:1.15rem;color:var(--or)}
+    .article p{font-size:.92rem;color:var(--noir);line-height:1.8;margin-bottom:1rem}
+    .article ul{margin:0 0 1.5rem 1.2rem;list-style:disc}
+    .article li{font-size:.92rem;color:var(--noir);line-height:1.8;margin-bottom:.6rem}
+    .article li strong{color:var(--noir)}
+    .article-meta{font-size:.75rem;color:var(--or);letter-spacing:.06em;margin-bottom:2rem}
+    .article-note{font-size:.85rem;color:var(--gris);font-style:italic;border-left:3px solid var(--or);padding:.8rem 1.2rem;margin:1.5rem 0;background:rgba(200,169,110,.05)}
+    .article-cta{text-align:center;margin:2rem 0}
+    .article-img{width:100%;height:auto;border:1px solid var(--gris-clair);margin:1.5rem 0}
+    .article-separator{border:none;border-top:1px solid var(--gris-clair);margin:4rem auto;max-width:800px}
+    .btn-primary{display:inline-block;padding:.8rem 2rem;background:var(--or);color:var(--noir);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:background .2s}
+    .btn-primary:hover{background:var(--or-hover);text-decoration:none}
     footer{display:flex;flex-direction:column;align-items:center;gap:1.2rem;padding:3rem 5%;border-top:1px solid var(--gris-clair);text-align:center}
     .footer-logo{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;letter-spacing:.15em}
     .footer-nav{display:flex;gap:2rem;flex-wrap:wrap;justify-content:center}
     .footer-nav a{color:var(--gris);text-decoration:none;font-size:.75rem}.footer-nav a:hover{color:var(--or)}
-.footer-legal{font-size:.65rem;color:var(--gris);line-height:1.6}
+    .footer-copy{font-size:.7rem;color:var(--gris)}
+    .footer-legal{font-size:.65rem;color:var(--gris);line-height:1.6}
     .fade-in{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}
     .fade-in.visible{opacity:1;transform:translateY(0)}
     @media(max-width:768px){
       .hamburger{display:flex}
       .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--blanc);padding:1.5rem 5%;border-bottom:1px solid var(--gris-clair);gap:1rem}
       .nav-links.open{display:flex}
-      .page-hero,.blog-grid{padding-left:6%;padding-right:6%}
-      .blog-grid{grid-template-columns:1fr}
+      .page-hero{padding-left:6%;padding-right:6%}
+      .article{padding-left:6%;padding-right:6%}
     }
   </style>
 </head>
 <body>
 
 <nav>
-  <a href="index.html" class="nav-logo"><img src="logo.png" alt="SKOPAIR" style="height:36px;width:auto;vertical-align:middle;margin-right:.5rem;">SKOPAIR</a>
+  <a href="index.html" class="nav-logo"><img src="logo.png" alt="SKOPAIR" style="height:36px;width:auto;vertical-align:middle;"></a>
   <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
@@ -73,67 +82,82 @@
   </ul>
 </nav>
 
+<!-- HERO BANDEAU NOIR -->
 <div class="page-hero fade-in">
-  <p class="section-eyebrow">Blog</p>
-  <h1>Actualit&eacute;s drone<br><em>&amp; photogramm&eacute;trie.</em></h1>
-  <p style="color:var(--gris);max-width:560px;font-size:1rem;line-height:1.8;margin-top:1.2rem;">Veille technique, retours terrain, &eacute;quipement et r&eacute;glementation. Les sujets qui comptent pour les professionnels du drone d'inspection.</p>
+  <div class="page-hero-inner">
+    <p class="section-eyebrow">Blog</p>
+    <h1>Actualit&eacute;s drone<br><em>&amp; photogramm&eacute;trie.</em></h1>
+    <p style="max-width:560px;font-size:1rem;line-height:1.8;margin-top:1.2rem;">Veille technique, retours terrain et analyses. Les sujets qui comptent pour les professionnels du drone d'inspection.</p>
+  </div>
 </div>
 
-<div class="blog-grid fade-in">
+<!-- ARTICLE 1 : IARD -->
+<div class="article fade-in" id="iard">
+  <p class="article-meta">Juillet 2026 &mdash; March&eacute;</p>
+  <h2>Drone et expertise assurance IARD&nbsp;: l'imagerie technique au service des experts BTP</h2>
 
-  <div class="blog-card">
-    <span class="badge">&Eacute;quipement</span>
-    <span class="blog-date">&mdash; Mai 2026</span>
-    <h3>DJI Mini 5 Pro : ce que &ccedil;a change pour l'inspection l&eacute;g&egrave;re</h3>
-    <p>Le nouveau Mini 5 Pro apporte un capteur 1 pouce et une vid&eacute;o 4K/120fps dans un format sub-249g. Quelles implications pour l'inspection de toiture en cat&eacute;gorie Ouverte A1 ? Analyse des specs et limites pour un usage professionnel.</p>
-    <span class="blog-status">Article &agrave; para&icirc;tre</span>
+  <p>Dans le cadre de l'instruction des sinistres IARD (Incendie, Accidents, Risques Divers), la phase de constat visuel et de relev&eacute; d'&eacute;tat est d&eacute;cisive pour l'expert d'assurance. Qu'il s'agisse de dommages &agrave; l'ouvrage suite &agrave; une temp&ecirc;te, d'impacts de gr&ecirc;le, de d&eacute;sordres ou de recherches d'infiltrations en toiture, l'intervention par drone s'impose comme la solution de capture de donn&eacute;es en zone d'acc&egrave;s complexe ou dangereuse.</p>
+
+  <h3>Des livrables m&eacute;triques pour &eacute;tayer le rapport d'expertise</h3>
+  <p>L'acquisition d'imagerie haute r&eacute;solution par t&eacute;l&eacute;pilote professionnel fournit aux cabinets d'expertise une sc&egrave;ne fig&eacute;e et exploitable&nbsp;:</p>
+  <ul>
+    <li><strong>Orthophotographie g&eacute;or&eacute;f&eacute;renc&eacute;e &agrave; haute r&eacute;solution&nbsp;:</strong> vue d'ensemble m&eacute;trique de la couverture et des fa&ccedil;ades pour l'inventaire exhaustif des d&eacute;g&acirc;ts mat&eacute;riels (tuiles d&eacute;plac&eacute;es, &eacute;l&eacute;ments de zinguerie arrach&eacute;s, fissures).</li>
+    <li><strong>Mod&eacute;lisation 3D et nuages de points (LAS/LAZ)&nbsp;:</strong> num&eacute;risation de la structure permettant la prise de mesures de distances, de pentes et de surfaces directement sur poste informatique.</li>
+    <li><strong>Inspecter sans alt&eacute;rer la sc&egrave;ne&nbsp;:</strong> r&eacute;alisation de clich&eacute;s haute d&eacute;finition sous tous les angles sans fouler une toiture fragilis&eacute;e.</li>
+  </ul>
+
+  <h3>S&eacute;curit&eacute;, gain de temps et optimisation des co&ucirc;ts d'instruction</h3>
+  <p>L'inspection de toiture et de b&acirc;timent par vecteur a&eacute;rien r&eacute;pond aux exigences op&eacute;rationnelles des professionnels de l'assurance&nbsp;:</p>
+  <ul>
+    <li><strong>Pr&eacute;vention du risque de chute&nbsp;:</strong> &eacute;limination du danger humain sur les structures endommag&eacute;es par un incendie ou une catastrophe naturelle (CatNat).</li>
+    <li><strong>R&eacute;duction des frais annexes&nbsp;:</strong> suppression du besoin syst&eacute;matique de mat&eacute;riel lourd (nacelles, &eacute;chafaudages) pour les relev&eacute;s pr&eacute;liminaires.</li>
+    <li><strong>R&eacute;activit&eacute; post-sinistre&nbsp;:</strong> d&eacute;ploiement rapide sur le terrain pour capturer l'&eacute;tat des lieux avant travaux de conservation ou d&eacute;gradation m&eacute;t&eacute;orologique.</li>
+  </ul>
+
+  <div class="article-note">Le service d'inspection par drone fournit des donn&eacute;es techniques et visuelles brutes ou trait&eacute;es (orthophotos, mod&egrave;les 3D, rapports photographiques). L'interpr&eacute;tation technique, le chiffrage et l'analyse des responsabilit&eacute;s restent de la comp&eacute;tence exclusive de l'expert ou du professionnel mandat&eacute;.</div>
+
+  <h3>SKOPAIR&nbsp;: op&eacute;rateur drone B2B en &Icirc;le-de-France</h3>
+  <p>Exploitant d&eacute;clar&eacute; et certifi&eacute;, SKOPAIR accompagne les experts d'assurance, commissaires de justice et gestionnaires de patrimoine dans la r&eacute;alisation de constats visuels par drone dans les Yvelines (78), les Hauts-de-Seine (92) et sur l'ensemble de la r&eacute;gion &Icirc;le-de-France.</p>
+
+  <div class="article-cta">
+    <a href="contact.html" class="btn-primary">Demander un relev&eacute; technique</a>
   </div>
-
-  <div class="blog-card">
-    <span class="badge">Logiciel</span>
-    <span class="blog-date">&mdash; Mai 2026</span>
-    <h3>Gaussian Splatting pour l'inspection : au-del&agrave; du maillage 3D</h3>
-    <p>Le Gaussian Splatting produit des rendus photor&eacute;alistes navigables en temps r&eacute;el. Comment cette technologie compl&egrave;te la photogramm&eacute;trie classique pour les experts d'assurance. Pipeline, outils open source et exemples de r&eacute;sultats.</p>
-    <span class="blog-status">Article &agrave; para&icirc;tre</span>
-  </div>
-
-  <div class="blog-card">
-    <span class="badge">R&eacute;glementation</span>
-    <span class="blog-date">&mdash; 2026</span>
-    <h3>Cat&eacute;gorie Ouverte A2 : guide pratique pour le t&eacute;l&eacute;pilote d'inspection</h3>
-    <p>CATS, BAPD, autoformation pratique : le parcours complet pour op&eacute;rer un drone C2 &agrave; proximit&eacute; des personnes. Sp&eacute;cificit&eacute;s du vol en zone pavillonnaire pour l'expertise sinistre.</p>
-    <span class="blog-status">Article &agrave; para&icirc;tre</span>
-  </div>
-
-  <div class="blog-card">
-    <span class="badge">Logiciel</span>
-    <span class="blog-date">&mdash; 2026</span>
-    <h3>WebODM vs RealityCapture : quel logiciel pour le t&eacute;l&eacute;pilote ind&eacute;pendant ?</h3>
-    <p>Comparatif co&ucirc;t, performance et compatibilit&eacute; mat&eacute;rielle. WebODM (gratuit, local, open source) face &agrave; RealityCapture (gratuit sous 1M&euro; CA, NVIDIA requis). Quel pipeline pour quelle mission ?</p>
-    <span class="blog-status">Article &agrave; para&icirc;tre</span>
-  </div>
-
-  <div class="blog-card">
-    <span class="badge">Terrain</span>
-    <span class="blog-date">&mdash; 2026</span>
-    <h3>Retour d'exp&eacute;rience : mod&eacute;lisation 3D d'un pavillon en Yvelines</h3>
-    <p>249 photos, traitement photogramm&eacute;trique ultra-qualit&eacute;, GSD 0,7 cm, nuage dense 9M+ points. Analyse du r&eacute;sultat, des artefacts rencontr&eacute;s et des pistes d'am&eacute;lioration pour les prochaines missions.</p>
-    <span class="blog-status">Article &agrave; para&icirc;tre</span>
-  </div>
-
-  <div class="blog-card">
-    <span class="badge">March&eacute;</span>
-    <span class="blog-date">&mdash; 2026</span>
-    <h3>Drone et expertise assurance IARD : un march&eacute; en structuration</h3>
-    <p>Les experts d'assurance mandat&eacute;s cherchent des outils pour acc&eacute;l&eacute;rer l'&eacute;valuation des sinistres habitation. Le drone et la photogramm&eacute;trie 3D r&eacute;duisent les d&eacute;lais, objectivent les constats et diminuent les contestations. &Eacute;tat des lieux du march&eacute; fran&ccedil;ais.</p>
-    <span class="blog-status">Article &agrave; para&icirc;tre</span>
-  </div>
-
 </div>
 
-<div style="text-align:center;padding:0 5% 4rem;" class="fade-in">
-  <p style="color:var(--gris);max-width:500px;margin:0 auto 1.5rem;font-size:.88rem;">Les articles sont en cours de r&eacute;daction et seront publi&eacute;s progressivement.</p>
-  <a href="contact.html" class="btn-outline">Nous contacter</a>
+<hr class="article-separator">
+
+<!-- ARTICLE 2 : MINI 5 PRO -->
+<div class="article fade-in" id="mini5pro">
+  <p class="article-meta">Juillet 2026 &mdash; &Eacute;quipement</p>
+  <h2>DJI Mini 5 Pro&nbsp;: pourquoi le drone C0 est l'alli&eacute; strat&eacute;gique des expertises d'assurance</h2>
+
+  <img src="https://images.unsplash.com/photo-1524143986875-3b098d78b363?w=800&q=80" alt="Drone l&eacute;ger en vol pour inspection de toiture" class="article-img" loading="lazy">
+
+  <p>Dans le secteur de l'expertise IARD et de la gestion de sinistres complexes, la vitesse d'intervention est primordiale. Si les drones lourds conservent leur utilit&eacute; sur certains grands chantiers, le DJI Mini 5 Pro s'impose aujourd'hui comme un vecteur d'inspection privil&eacute;gi&eacute; pour les experts techniques et commissaires de justice.</p>
+
+  <h3>Cadre r&eacute;glementaire C0 / A1&nbsp;: une r&eacute;activit&eacute; op&eacute;rationnelle maximale</h3>
+  <p>Pesant moins de 250 grammes, le DJI Mini 5 Pro appartient &agrave; la cat&eacute;gorie C0 (Cat&eacute;gorie Ouverte A1). Cette classification europ&eacute;enne offre un avantage d&eacute;cisif sur le terrain&nbsp;:</p>
+  <ul>
+    <li><strong>Agilit&eacute; r&eacute;glementaire&nbsp;:</strong> all&egrave;gement significatif des contraintes administratives pr&eacute;-vol par rapport aux cat&eacute;gories de drones plus lourds.</li>
+    <li><strong>Gestion des tiers&nbsp;:</strong> en cat&eacute;gorie A1, le survol occasionnel et non intentionnel de personnes isol&eacute;es est tol&eacute;r&eacute; (hors rassemblements de personnes), r&eacute;duisant consid&eacute;rablement les p&eacute;rim&egrave;tres de s&eacute;curit&eacute; en zone urbaine.</li>
+    <li><strong>D&eacute;ploiement imm&eacute;diat&nbsp;:</strong> capacit&eacute; d'intervention ultra-rapide post-catastrophe naturelle (CatNat), permettant de figer l'&eacute;tat des lieux avant toute d&eacute;gradation compl&eacute;mentaire de la toiture.</li>
+  </ul>
+
+  <h3>Du capteur HD &agrave; la mod&eacute;lisation 3D</h3>
+  <p>Malgr&eacute; son gabarit r&eacute;duit, le Mini 5 Pro embarque un capteur optique haute r&eacute;solution capable de fournir un niveau de d&eacute;tail pr&eacute;cis pour le diagnostic visuel de couverture, de fa&ccedil;ade ou de zinguerie.</p>
+  <p>Les donn&eacute;es brutes g&eacute;or&eacute;f&eacute;renc&eacute;es captur&eacute;es sur le terrain sont directement int&eacute;gr&eacute;es dans notre cha&icirc;ne de traitement technique&nbsp;:</p>
+  <ul>
+    <li><strong>Traitement photogramm&eacute;trique&nbsp;:</strong> g&eacute;n&eacute;ration d'orthophotographies m&eacute;triques &agrave; haute r&eacute;solution et de nuages de points 3D exploitables.</li>
+    <li><strong>Relev&eacute;s m&eacute;triques&nbsp;:</strong> mesures de distances, surfaces et volumes exploitables directement dans les rapports d'expertise.</li>
+  </ul>
+
+  <h3>Une r&eacute;ponse sur mesure pour les r&eacute;seaux d'expertise et assureurs</h3>
+  <p>Cette flexibilit&eacute; mat&eacute;rielle et r&eacute;glementaire permet &agrave; SKOPAIR de r&eacute;pondre avec une grande r&eacute;activit&eacute; aux sollicitations des principaux cabinets d'expertise (Stelliant, Saretec, Polyexpert, IXI Groupe) ainsi qu'aux exigences des grandes compagnies d'assurance (AXA, Cov&eacute;a, Generali, GMF, MAIF).</p>
+  <p>Proposant un service d'imagerie technique sans acc&egrave;s physique en hauteur ni prise de risque humaine, SKOPAIR intervient rapidement dans les Yvelines (78), les Hauts-de-Seine (92) et sur l'ensemble de l'&Icirc;le-de-France.</p>
+
+  <div class="article-cta">
+    <a href="contact.html" class="btn-primary">Programmer une d&eacute;monstration</a>
+  </div>
 </div>
 
 <footer>
